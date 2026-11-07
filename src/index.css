@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-deep: #111729;
+  --color-page: #20293a;
+  --color-violet: #1d1b48;
+  --color-line: #364153;
+  --color-fg: #cdd5e0;
+  --color-fg-muted: #97a3b6;
+  --animate-toast-in: toast-in 0.3s ease-out;
+
+  @keyframes toast-in {
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
