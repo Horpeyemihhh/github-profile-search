@@ -17,7 +17,7 @@ function App() {
     <main className="min-h-screen bg-page text-fg">
       <header
         className="flex h-40 items-start justify-center bg-cover bg-center px-4 pt-6 sm:h-50 sm:pt-8"
-        style={{ backgroundImage: "url('/images/hero-image-github-profile.jpg')" }}
+        style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/hero-image-github-profile.jpg')` }}
       >
         <SearchBar onSearch={setUsername} />
       </header>

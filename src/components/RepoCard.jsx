@@ -20,9 +20,9 @@ function RepoCard({repo}) {
         {repo.description && <p className="text-[12px] text-fg-muted">{repo.description}</p>}
 
         <ul className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
-          {license && <Meta icon="/images/Chield_alt.svg">{license}</Meta>}
-          <Meta icon="/images/Nesting.svg">{repo.forks_count.toLocaleString()}</Meta>
-          <Meta icon="/images/Star.svg">{repo.stargazers_count.toLocaleString()}</Meta>
+          {license && <Meta icon={`${import.meta.env.BASE_URL}images/Chield_alt.svg`}>{license}</Meta>}
+          <Meta icon={`${import.meta.env.BASE_URL}images/Nesting.svg`}>{repo.forks_count.toLocaleString()}</Meta>
+          <Meta icon={`${import.meta.env.BASE_URL}images/Star.svg`}>{repo.stargazers_count.toLocaleString()}</Meta>
           <li className="text-[10px] text-fg-muted">
             updated {timeAgo(repo.updated_at)}
           </li>

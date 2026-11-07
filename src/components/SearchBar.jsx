@@ -20,7 +20,7 @@ function SearchBar({onSearch}) {
       onSubmit={handleSubmit}
       className="flex items-center gap-3 rounded-xl bg-page px-4 py-3 focus-within:ring-2 focus-within:ring-fg-muted"
     >
-      <img src="images/Search.svg" alt="Search-icon"/>
+      <img src={`${import.meta.env.BASE_URL}images/Search.svg`} alt="Search-icon"/>
       <input
         type="search"
         value={value}
