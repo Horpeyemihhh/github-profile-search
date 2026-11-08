@@ -8,7 +8,7 @@ function useGithubUser(username) {
     const controller = new AbortController();
 
     async function load() {
-      setState({ status: "loading", user: null, repos: [], error: "" });
+      setState((prev) => ({ ...prev, status: "loading", error: "" }));
 
       try {
         const [uRes, rRes] = await Promise.all([
@@ -22,7 +22,7 @@ function useGithubUser(username) {
         setState({ status: "success", user: await uRes.json(), repos: await rRes.json(), error: "" });
       } catch (err) {
         if (err.name === "AbortError") return;   // ignore cancelled requests
-        setState({ status: "error", user: null, repos: [], error: err.message });
+        setState((prev) => ({ ...prev, status: "error", error: err.message }));
       }
     }
 

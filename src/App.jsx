@@ -27,12 +27,15 @@ function App() {
       </Suspense>
       
       <div className="mx-auto w-full max-w-4xl px-4 sm:px-5">
-        {status === "loading" && <Loader />}
-        {status === "success" && (
-          <>
-            <ProfileHeader user={user} />
-            <RepoList repos={repos} />
-          </>
+        {status === "loading" ? (
+          <Loader />
+        ) : (
+         user && (
+           <>
+             <ProfileHeader user={user} />
+             <RepoList repos={repos} />
+           </>
+         )
         )}
       </div>
     </main>
